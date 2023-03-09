@@ -33,14 +33,13 @@ export class DetailsComponent implements OnInit {
   getdata(i: any, V: any) {
     debugger;
     if (this.delete == false) {
+      var data = this.userlist[i];
+      localStorage.setItem('Userdata', JSON.stringify(data));
+
       if (V == 'G') {
-        var data = this.userlist[i];
-        localStorage.setItem('Userdata', JSON.stringify(data));
         this.route.navigateByUrl('crud/details/' + i);
       } else {
-        var data = this.userlist[i];
-        localStorage.setItem('Userdata', JSON.stringify(data));
-        this.route.navigateByUrl('crud/form/'+i);
+        this.route.navigateByUrl('crud/form/' + i);
       }
     }
   }
