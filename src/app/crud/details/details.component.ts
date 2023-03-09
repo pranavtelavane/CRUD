@@ -40,7 +40,7 @@ export class DetailsComponent implements OnInit {
       } else {
         var data = this.userlist[i];
         localStorage.setItem('Userdata', JSON.stringify(data));
-        this.route.navigateByUrl('crud/form');
+        this.route.navigateByUrl('crud/form/'+i);
       }
     }
   }

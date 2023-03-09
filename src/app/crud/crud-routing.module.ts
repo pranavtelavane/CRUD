@@ -10,6 +10,10 @@ const routes: Routes = [
     component:FormComponent
   },
   {
+    path:'form/:id',
+    component:FormComponent
+  },
+  {
     path:'details',
     component:DetailsComponent
   },

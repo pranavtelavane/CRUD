@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path:'',redirectTo:'crud/details', pathMatch:'full'
+  },
+  {
     path:'crud',
     loadChildren: () => import('./crud/crud.module').then(m => m.CrudModule)
   }
