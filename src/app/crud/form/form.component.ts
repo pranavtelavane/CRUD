@@ -11,6 +11,7 @@ import { ServiceService } from 'src/app/Service/service.service';
 })
 export class FormComponent implements OnInit {
   registractionform: FormGroup;
+  submitted: boolean = false;
   constructor(
     private fb: FormBuilder,
     private toastr: ToastrService,
@@ -56,10 +57,12 @@ export class FormComponent implements OnInit {
   }
 
   proceed() {
+    debugger
+    this.submitted = true
     if (this.registractionform.valid) {
         this.service.ProceedRegister(this.registractionform.value).subscribe((res) => {
           this.toastr.success('Data Added Successfully');
-          this.route.navigateByUrl('/landing')
+          this.route.navigateByUrl('/crud/details');
         });
 
     } else {
@@ -67,6 +70,6 @@ export class FormComponent implements OnInit {
     }
   }
   get f() {
-    return this.registractionform.controls
+    return this.registractionform.controls;
   }
 }

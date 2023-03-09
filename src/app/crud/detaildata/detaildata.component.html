@@ -1,0 +1,32 @@
+<div class="content">
+    <mat-card class="card-container" layout-align="center center">
+        <mat-card-header>
+            <mat-card-title> User Details</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <br>
+            <h3 class="card-container-left"><b>First name : </b>{{detailsdata.Fname}}</h3>
+            <hr>
+            <h3 class="card-container-left"><b>Middle Name : </b>{{detailsdata.Mname}}</h3>
+            <hr>
+            <h3 class="card-container-left"><b>Last Name : </b>{{detailsdata.Lname}}</h3>
+            <hr>
+            <h3 class="card-container-left"><b>Email : </b>{{detailsdata.Email}}</h3>
+            <hr>
+            <h3 class="card-container-left"><b>Phone number : </b>{{detailsdata.Mobile}}</h3>
+            <hr>
+            <h3 class="card-container-left"><b>Address 1 : </b>{{detailsdata.Address}}</h3>
+            <hr>
+            <h3 class="card-container-left"><b>Address 2 : </b>{{detailsdata.Address2}}</h3>
+            <hr>
+            <h3 class="card-container-left"><b>City : </b>{{detailsdata.City}}</h3>
+            <hr>
+            <h3 class="card-container-left"><b>State : </b>{{detailsdata.State}}</h3>
+            <hr>
+            <h3 class="card-container-left"><b>Zip : </b>{{detailsdata.Zip}}</h3><br>
+        </mat-card-content>
+        <div style="text-align: center;" class="example-button-row">
+            <button mat-raised-button color="primary" routerLink="/crud/details">Back</button>
+        </div>
+    </mat-card>
+</div>

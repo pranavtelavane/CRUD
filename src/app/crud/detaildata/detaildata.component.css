@@ -1,0 +1,28 @@
+.card-container {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.content {
+    padding: 30px;
+}
+
+.content>mat-card {
+    width: 500px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-mdc-card-title {
+    padding-top: 1px;
+    border: 2px solid #000;
+    padding-left: 52px;
+    padding-right: 52px;
+    background-color: aqua;
+}

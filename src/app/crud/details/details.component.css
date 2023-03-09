@@ -1,0 +1,7 @@
+.headcolor {
+    background-color: aqua;
+}
+
+.mat-mdc-raised-button:not(:disabled) {
+    margin-top: 11px;
+}

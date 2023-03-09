@@ -5,12 +5,14 @@ import { CrudRoutingModule } from './crud-routing.module';
 import { FormComponent } from './form/form.component';
 import { DetailsComponent } from './details/details.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DetaildataComponent } from './detaildata/detaildata.component';
 
 
 @NgModule({
   declarations: [
     FormComponent,
-    DetailsComponent
+    DetailsComponent,
+    DetaildataComponent
   ],
   imports: [
     CommonModule,

@@ -1,9 +1,69 @@
 {
   "users": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "Fname": "Pranav",
+      "Mname": "Sanjay",
+      "Lname": "Telavane",
+      "Email": "pt123@gmail.com",
+      "Mobile": 9076415646,
+      "Address": "504/C2 Punyodaya Park",
+      "Address2": "Adharwadi chowk",
+      "City": "Kalyan",
+      "State": "Maharashtra",
+      "Zip": 421301,
+      "id": 1
+    },
+    {
+      "Fname": "Swara",
+      "Mname": "Ajay",
+      "Lname": "Telavane",
+      "Email": "swara@gmail.com",
+      "Mobile": 9841234569,
+      "Address": "Telavane House",
+      "Address2": "near Ganesh Mandir",
+      "City": "Murbad",
+      "State": "Maharashtra",
+      "Zip": 421401,
+      "id": 2
+    },
+    {
+      "Fname": "Sanjay",
+      "Mname": "Pandharinath",
+      "Lname": "Telavane",
+      "Email": "sanjay@gmail.com",
+      "Mobile": 7715030646,
+      "Address": "504/C2 Punyodaya Park",
+      "Address2": "Adharwadi Chowk",
+      "City": "Kalyan",
+      "State": "Maharashtra",
+      "Zip": 421301,
+      "id": 3
+    },
+    {
+      "Fname": "Samita",
+      "Mname": "Sanjay",
+      "Lname": "Telavane",
+      "Email": "samita@gmail.com",
+      "Mobile": 7715030656,
+      "Address": "504/C2 Punyodaya Park",
+      "Address2": "Adharwadi Chowk",
+      "City": "Kalyan",
+      "State": "Maharashtra",
+      "Zip": 421301,
+      "id": 4
+    },
+    {
+      "Fname": "Akshay",
+      "Mname": "Shrikant",
+      "Lname": "Sagvekar",
+      "Email": "sagve@gmail.com",
+      "Mobile": 5845632147,
+      "Address": "nalasopara east",
+      "Address2": "",
+      "City": "Nalasopara",
+      "State": "Maharashtra",
+      "Zip": 541302,
+      "id": 5
     }
   ],
   "comments": [
