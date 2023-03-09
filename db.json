@@ -31,7 +31,7 @@
       "Mname": "Pandharinath",
       "Lname": "Telavane",
       "Email": "sanjay@gmail.com",
-      "Mobile": 7715030646,
+      "Mobile": 9875132598,
       "Address": "504/C2 Punyodaya Park",
       "Address2": "Adharwadi Chowk",
       "City": "Kalyan",
@@ -51,19 +51,6 @@
       "State": "Maharashtra",
       "Zip": 421301,
       "id": 4
-    },
-    {
-      "Fname": "Akshay",
-      "Mname": "Shrikant",
-      "Lname": "Sagvekar",
-      "Email": "sagve@gmail.com",
-      "Mobile": 5845632147,
-      "Address": "nalasopara east",
-      "Address2": "",
-      "City": "Nalasopara",
-      "State": "Maharashtra",
-      "Zip": 541302,
-      "id": 5
     }
   ],
   "comments": [

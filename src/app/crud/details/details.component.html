@@ -20,13 +20,13 @@
 
   <ng-container matColumnDef="Action">
     <th mat-header-cell *matHeaderCellDef>Action</th>
-    <td mat-cell *matCellDef=""><span (click)="Editdata()" class="material-icons">mode_edit</span> <span (click)="deletedata()" class="material-icons">delete</span></td>
+    <td mat-cell *matCellDef="let i = index"><span (click)="getdata(i,'E')" class="material-icons">mode_edit</span> <span (click)="deletedata(i)" class="material-icons">delete</span></td>
   </ng-container>
 
 
 
   <tr mat-header-row class="headcolor" *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; let i = index; columns: displayedColumns" 
-    (click)="getdata(i)"></tr>
+    (click)="getdata(i,'G')"></tr>
 </table>
 

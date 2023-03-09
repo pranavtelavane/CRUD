@@ -12,6 +12,8 @@ import { ServiceService } from 'src/app/Service/service.service';
 export class FormComponent implements OnInit {
   registractionform: FormGroup;
   submitted: boolean = false;
+  detailsdata: any;
+  update: boolean = false;
   constructor(
     private fb: FormBuilder,
     private toastr: ToastrService,
@@ -19,6 +21,7 @@ export class FormComponent implements OnInit {
     private route: Router
   ) {}
   ngOnInit(): void {
+    debugger;
     this.registractionform = this.fb.group({
       Fname: this.fb.control('', [
         Validators.required,
@@ -54,18 +57,36 @@ export class FormComponent implements OnInit {
         Validators.pattern('^[0-9]*$'),
       ]),
     });
+    this.detailsdata = JSON.parse(localStorage.getItem('Userdata') || '{}');
+    if (this.detailsdata.Fname != null) {
+      this.update = true;
+      this.registractionform.patchValue(this.detailsdata);
+    }
   }
 
   proceed() {
-    debugger
-    this.submitted = true
+    debugger;
+    this.submitted = true;
     if (this.registractionform.valid) {
-        this.service.ProceedRegister(this.registractionform.value).subscribe((res) => {
+      this.service
+        .ProceedRegister(this.registractionform.value)
+        .subscribe((res) => {
           this.toastr.success('Data Added Successfully');
           this.route.navigateByUrl('/crud/details');
         });
-
     } else {
+      this.toastr.warning('Please Enter Valid Data');
+    }
+  }
+  updatedata() {
+    debugger
+    if(this.registractionform.valid){
+      this.service.Updateuser(this.detailsdata.id,this.registractionform.value).subscribe((res) => {
+        this.toastr.success('Data Updated Successfully');
+        this.route.navigateByUrl('/crud/details');
+      });
+    }
+    else{
       this.toastr.warning('Please Enter Valid Data');
     }
   }

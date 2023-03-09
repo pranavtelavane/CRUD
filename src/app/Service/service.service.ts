@@ -25,4 +25,7 @@ export class ServiceService {
   Updateuser(code:any,data:any){
     return this.http.put(this.apiurl+ '/'+code,data)
   }
+  deleteuser(id : number){
+    return this.http.delete<any>(this.apiurl+'/'+id)
+  }
 }

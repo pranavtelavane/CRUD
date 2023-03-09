@@ -99,79 +99,101 @@
         <div class="example-button-row bottom-one">
           <mat-form-field class="example-full-width">
             <mat-label>Address 1</mat-label>
-            <input type="text" matInput formControlName="Address" placeholder="" />
-            <mat-error
-              *ngIf="f.Address?.touched && f.Address?.errors?.required"
+            <input
+              type="text"
+              matInput
+              formControlName="Address"
+              placeholder=""
+            />
+            <mat-error *ngIf="f.Address?.touched && f.Address?.errors?.required"
               >Address 1 is Required
             </mat-error>
-            <mat-error
-              *ngIf="f.Address?.touched && f.Address?.errors?.pattern"
+            <mat-error *ngIf="f.Address?.touched && f.Address?.errors?.pattern"
               >Invalid Address 1</mat-error
             >
           </mat-form-field>
         </div>
 
         <div class="example-button-row bottom-one">
-            <mat-form-field class="example-full-width">
-              <mat-label>Address 2</mat-label>
-              <input matInput type="text" formControlName="Address2" placeholder="" />
-              <mat-error
-                *ngIf="f.Address2?.touched && f.Address2?.errors?.pattern"
-                >Invalid Address 2</mat-error
-              >
-            </mat-form-field>
-          </div>
+          <mat-form-field class="example-full-width">
+            <mat-label>Address 2</mat-label>
+            <input
+              matInput
+              type="text"
+              formControlName="Address2"
+              placeholder=""
+            />
+            <mat-error
+              *ngIf="f.Address2?.touched && f.Address2?.errors?.pattern"
+              >Invalid Address 2</mat-error
+            >
+          </mat-form-field>
+        </div>
 
         <div class="example-button-row bottom-one">
           <mat-form-field class="example-full-width">
             <mat-label>City</mat-label>
             <input matInput type="text" formControlName="City" placeholder="" />
-            <mat-error
-              *ngIf="f.City?.touched && f.City?.errors?.required"
+            <mat-error *ngIf="f.City?.touched && f.City?.errors?.required"
               >City is Required
             </mat-error>
-            <mat-error
-              *ngIf="f.City?.touched && f.City?.errors?.pattern"
+            <mat-error *ngIf="f.City?.touched && f.City?.errors?.pattern"
               >City should be alphabetic</mat-error
             >
           </mat-form-field>
         </div>
 
         <div class="example-button-row bottom-one">
-            <mat-form-field class="example-full-width">
-              <mat-label>State</mat-label>
-              <input matInput type="text" formControlName="State" placeholder="" />
-              <mat-error
-                *ngIf="f.State?.touched && f.State?.errors?.required"
-                >State is Required
-              </mat-error>
-              <mat-error
-                *ngIf="f.State?.touched && f.State?.errors?.pattern"
-                >State should be alphabetic</mat-error
-              >
-            </mat-form-field>
-          </div>
-
-          <div class="example-button-row bottom-one">
-            <mat-form-field class="example-full-width">
-              <mat-label>Zip</mat-label>
-              <input matInput type="number" formControlName="Zip" placeholder="" />
-              <mat-error
-                *ngIf="f.Zip?.touched && f.Zip?.errors?.required"
-                >Zip is Required
-              </mat-error>
-              <mat-error
-                *ngIf="f.Zip?.touched && f.Zip?.errors?.pattern"
-                >Zip should be numeric</mat-error
-              >
-            </mat-form-field>
-          </div>
+          <mat-form-field class="example-full-width">
+            <mat-label>State</mat-label>
+            <input
+              matInput
+              type="text"
+              formControlName="State"
+              placeholder=""
+            />
+            <mat-error *ngIf="f.State?.touched && f.State?.errors?.required"
+              >State is Required
+            </mat-error>
+            <mat-error *ngIf="f.State?.touched && f.State?.errors?.pattern"
+              >State should be alphabetic</mat-error
+            >
+          </mat-form-field>
+        </div>
 
         <div class="example-button-row bottom-one">
+          <mat-form-field class="example-full-width">
+            <mat-label>Zip</mat-label>
+            <input
+              matInput
+              type="number"
+              formControlName="Zip"
+              placeholder=""
+            />
+            <mat-error *ngIf="f.Zip?.touched && f.Zip?.errors?.required"
+              >Zip is Required
+            </mat-error>
+            <mat-error *ngIf="f.Zip?.touched && f.Zip?.errors?.pattern"
+              >Zip should be numeric</mat-error
+            >
+          </mat-form-field>
+        </div>
+
+        <div *ngIf="update == false" class="example-button-row bottom-one">
           <section>
             <div class="example-button-row">
               <button mat-raised-button color="primary" (click)="proceed()">
                 Submit
+              </button>
+            </div>
+          </section>
+        </div>
+
+        <div *ngIf="update == true" class="example-button-row bottom-one">
+          <section>
+            <div class="example-button-row">
+              <button mat-raised-button color="primary" (click)="updatedata()">
+                Update
               </button>
             </div>
           </section>
