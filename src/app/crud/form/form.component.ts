@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { ServiceService } from 'src/app/Service/service.service';
 
 @Component({
   selector: 'app-form',
@@ -11,8 +13,8 @@ export class FormComponent implements OnInit {
   registractionform: FormGroup;
   constructor(
     private fb: FormBuilder,
-    // private toastr: ToastrService,
-    // private s: AuthService,
+    private toastr: ToastrService,
+    private service: ServiceService,
     private route: Router
   ) {}
   ngOnInit(): void {
@@ -51,5 +53,20 @@ export class FormComponent implements OnInit {
         Validators.pattern('^[0-9]*$'),
       ]),
     });
+  }
+
+  proceed() {
+    if (this.registractionform.valid) {
+        this.service.ProceedRegister(this.registractionform.value).subscribe((res) => {
+          this.toastr.success('Data Added Successfully');
+          this.route.navigateByUrl('/landing')
+        });
+
+    } else {
+      this.toastr.warning('Please Enter Valid Data');
+    }
+  }
+  get f() {
+    return this.registractionform.controls
   }
 }
