@@ -41,9 +41,9 @@ export class FormComponent implements OnInit {
       ]),
       Address: this.fb.control('', [
         Validators.required,
-        Validators.pattern('^[A-Za-z0-9/. ]*$'),
+        Validators.pattern('^[A-Za-z0-9()-/. ]*$'),
       ]),
-      Address2: this.fb.control('', [Validators.pattern('^[A-Za-z0-9/. ]*$')]),
+      Address2: this.fb.control('', [Validators.pattern('^[A-Za-z0-9-()/. ]*$')]),
       City: this.fb.control('', [
         Validators.required,
         Validators.pattern('^[A-Za-z ]*$'),
